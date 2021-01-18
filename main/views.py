@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from .models import ToDo
+from .models import BookSale
 
 def homepage(request):
     return render(request, "index.html")
@@ -17,5 +18,6 @@ def page2(request):
 def page3(request):
     return render(request, "page3.html") 
 
-def books_sale(request):
-    return render(request, "books.html") 
+def book_sale(request):
+    book_list = BookSale.objects.all()
+    return render(request, "books.html", {"book_list": book_list})

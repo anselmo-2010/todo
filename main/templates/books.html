@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Books sale</h1>
+    {% for book in book_list %}
+        <h1>{{ book.title }}</h1>
+        <h1>{{ book.subtitle }}</h1>
+        <h1>{{ book.price }}</h1>
+    {% endfor %}
+    
 </body>
 </html>
