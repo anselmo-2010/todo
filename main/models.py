@@ -6,3 +6,10 @@ class ToDo(models.Model):
     is_closed = models.BooleanField(default=False)
     is_favorite = models.BooleanField(default=False)
 
+class BookSale(models.Model):
+    title = models.CharField(max_length=100)
+    subtitle = models.CharField(max_length=100)
+    description = models.TextField(max_length=255)
+    price = models.IntegerField()
+    
+    

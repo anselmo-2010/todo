@@ -16,3 +16,6 @@ def page2(request):
 
 def page3(request):
     return render(request, "page3.html") 
+
+def books_sale(request):
+    return render(request, "books.html") 
