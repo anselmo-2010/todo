@@ -14,6 +14,6 @@ class BookSale(models.Model):
     genre = models.CharField(max_length=100)
     author = models.CharField(max_length=100)
     year = models.IntegerField()
-    date = models.DateField(auto_now_add=True)
+    date = models.DateTimeField(auto_now_add=True)
 
     

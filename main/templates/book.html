@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "styles/style2.css" %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="section_1">
+            <form action="{% url "add-book" %}" method="POST">
+                {% csrf_token %}
+                <input class="create_input" type="text" placeholder="Напишите сюда название книги"                name="book_text">    
+                <input class="create_input" type="text" placeholder="Напишите сюда автора"                name="book_text2"> 
+                <input class="create_input" type="text" placeholder="Напишите сюда заголовок"                name="book_text3">    
+                <input class="create_input" type="text" placeholder="Напишите сюда описание (description)"       name="book_text4">
+                <input class="create_input" type="text" placeholder="Напишите сюда год выпуска"                name="book_text5">    
+                <input class="create_input" type="text" placeholder="Напишите сюда жанр"                name="book_text6"> 
+                <input class="create_input" type="text" placeholder="Напишите сюда стоимость"                name="book_text7"> 
+                <button class="create_button">Добавить</button>
+            </form>
+        </div>
+        <div class="section_2">
+            {% for book in book_list %}
+                <div class="todo-item">
+                     <h3>{{ book.title }}</h3>
+                     <h3>{{ book.author }}</h3>
+                     <h3>{{ book.subtitle }}</h3>
+                     <h3>{{ book.description }}</h3>
+                     <h3>{{ book.year }}</h3>
+                     <h3>{{ book.genre }}</h3>
+                     <h3>{{ book.price }}</h3>
+                     <h3>{{ book.date }}</h3>
+                </div>
+            {% endfor %}
+         </div>
+    </div>
+</body>
+</html>
