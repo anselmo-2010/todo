@@ -11,5 +11,9 @@ class BookSale(models.Model):
     subtitle = models.CharField(max_length=100)
     description = models.TextField(max_length=255)
     price = models.IntegerField()
-    
+    genre = models.CharField(max_length=100)
+    author = models.CharField(max_length=100)
+    year = models.IntegerField()
+    date = models.DateField(auto_now_add=True)
+
     
