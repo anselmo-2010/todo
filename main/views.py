@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from .models import ToDo
 from .models import BookSale
 
+
 def homepage(request):
     return render(request, "index.html")
 
@@ -42,3 +43,7 @@ def add_book(request):
     bookread.save()
     return redirect(book_sale)
    
+def delete_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.delete()
+    return redirect(test)
