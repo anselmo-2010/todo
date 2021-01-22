@@ -12,13 +12,13 @@
 }
 
 /* Hide the browser's default checkbox */
-/*.checkbox_container input {
+/* .checkbox_container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
-}*/
+} */
 
 /* Create a custom checkbox */
 .checkmark {

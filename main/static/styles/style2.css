@@ -4,7 +4,6 @@
 	padding: 0;
 	color: #263238;
 }
-
 .container{
     width: 100%;
     padding: 40px;
@@ -22,7 +21,6 @@
 	width: 80%;
 	margin-bottom: 5px;
 }
-
 .create_button{
 	padding: 12px 20px;
 	background-color: #ce93D8;
@@ -47,7 +45,17 @@
     background-color: pink;
     width: 30%;
 }
-
+.todo-item.marked{
+	background-color: #ffe082;
+	border: 2px solid #fad66a;
+}
 .todo-item h3 {
     margin-bottom: 20px;
+}
+.footer{
+	height: 200px;	width: 200px;
+}
+.todo-item img{
+	width:25px;
+	height: 25px;
 }
