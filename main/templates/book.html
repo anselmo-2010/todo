@@ -24,7 +24,10 @@
         </div>
         <div class="section_2">
             {% for book in book_list %}
-                <div class="todo-item">
+                <div class="todo-item 
+                {% if book.is_favorite %}
+                    marked
+                {% endif %}">
                      <h3>{{ book.title }}</h3>
                      <h3>{{ book.author }}</h3>
                      <h3>{{ book.subtitle }}</h3>
@@ -33,6 +36,7 @@
                      <h3>{{ book.genre }}</h3>
                      <h3>{{ book.price }}</h3>
                      <h3>{{ book.date }}</h3>
+                     <h3>{{ book.is_favorite }}</h3>
                    <div class="footer">
                        {% if book.is_favorite %}
                         <a href="{% url "book-todo" book.id %}"><img src="{%static "/img/star.png" %}"></a>
