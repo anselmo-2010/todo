@@ -34,7 +34,12 @@
                      <h3>{{ book.price }}</h3>
                      <h3>{{ book.date }}</h3>
                    <div class="footer">
-                       <img src="{%static "/img/star.png" %}">
+                       {% if book.is_favorite %}
+                        <a href="{% url "book-todo" book.id %}"><img src="{%static "/img/star.png" %}"></a>
+                       {% else %}
+                        <a href="{% url "book-todo" book.id %}"><img src="{%static "/img/yellow.png" %}"></a>
+                       {% endif %}
+                        <a href="{% url "book-delete" book.id %}"><img src="{%static "/img/basket.png" %}"></a>
                    </div> 
                 </div>
             {% endfor %}
