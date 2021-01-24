@@ -40,10 +40,11 @@
 	width: 100%;
 }
 .todo-item{
-    border: 1px solid green;
+    border: 2px solid #fad66a;
     padding: 20px 15px;
     background-color: lightgrey;
-    width: 30%;
+	width: 30%;
+	margin-bottom: 10px;
 }
 
 .todo-item.marked{

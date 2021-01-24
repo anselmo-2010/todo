@@ -44,6 +44,7 @@
                         <a href="{% url "book-todo" book.id %}"><img src="{%static "/img/yellow.png" %}"></a>
                        {% endif %}
                         <a href="{% url "book-delete" book.id %}"><img src="{%static "/img/basket.png" %}"></a>
+                        <a href="{% url "book_detail" book.id %}"><button>detail</button></a> 
                    </div> 
                 </div>
             {% endfor %}

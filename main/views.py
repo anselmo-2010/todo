@@ -70,3 +70,7 @@ def book_todo(request, id):
     book.is_favorite = True
     book.save()
     return redirect(book_sale)
+
+def book_detail(request, id):
+    todo_object = BookSale.objects.filter(id=id)
+    return render(request, "book.html", {"book_list": todo_object})
